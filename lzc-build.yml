@@ -1,0 +1,10 @@
+buildscript: |
+  rm -rf ./dist
+  mkdir -p ./dist
+  cp -r index.mjs shared.mjs apns.mjs fcm.mjs package.json ./dist/
+  cd ./dist && npm install --omit=dev
+
+manifest: ./lzc-manifest.yml
+contentdir: ./dist
+pkgout: ./
+icon: ./lzc-icon.png

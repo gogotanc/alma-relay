@@ -62,6 +62,20 @@ npx github:yetone/alma-relay
 
 用 `curl https://relay.example.com/healthz` 检查是否正常运行。
 
+### 方案 D：懒猫微服（LazyCat Cloud）
+
+项目已内置懒猫微服应用配置（LPK v2 规范），可直接打包部署至你的懒猫设备：
+
+```bash
+# 1. 打包 .lpk 应用安装包
+lzc-cli project release -o alma-relay.lpk
+
+# 2. 安装至懒猫设备
+lzc-cli lpk install alma-relay.lpk --apk n
+```
+
+部署完成后，中继公网地址为 `https://alma-relay.<你的盒子名>.heiyu.space`，自带泛域名 HTTPS 与 WebSocket 协议升级支持。
+
 ## 在 Alma 里使用
 
 1. 在桌面端打开 **设置 → 远程访问**。

@@ -1,0 +1,15 @@
+application:
+  subdomain: alma-relay
+  public_path:
+    - /
+  routes:
+    - /=http://relay:8787
+
+services:
+  relay:
+    image: node:20-alpine
+    environment:
+      - PORT=8787
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+    command: sh -c "cd /lzcapp/pkg/content && node index.mjs"
