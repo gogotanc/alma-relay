@@ -2,6 +2,13 @@
 
 English | [简体中文](README.zh-CN.md)
 
+> 💡 **About this fork**  
+> This fork extends upstream [yetone/alma-relay](https://github.com/yetone/alma-relay) with native support for **[LazyCat Cloud (懒猫微服)](https://lazycat.cloud)**:
+> - 📦 **Built-in LPK v2 Packaging**: Pre-configured `package.yml`, `lzc-manifest.yml`, and `lzc-build.yml`;
+> - ⚡️ **Lightweight & Self-contained**: Under 300KB `.lpk` package running on a clean Node runtime, avoiding slow container pulls on edge devices;
+> - 🔒 **Automatic TLS & Seamless Tunneling**: Configured with `public_path: - /` to forward Alma's E2E-encrypted traffic with automatic HTTPS certificates and WebSocket upgrade support;
+> - 🚀 **Ready for Private Cloud Hardware**: Easily built and installed onto any LazyCat Cloud device via `lzc-cli`.
+
 Your own relay for **[Alma](https://alma.now) Remote Access**: control the Alma
 on your desktop from the Alma app on your phone, from anywhere, with no port
 forwarding, no VPN, and no third party in between.

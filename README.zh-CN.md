@@ -2,6 +2,13 @@
 
 [English](README.md) | 简体中文
 
+> 💡 **本 Fork 仓库核心特性**  
+> 本仓库在上游 [yetone/alma-relay](https://github.com/yetone/alma-relay) 的基础上，增加了对 **[懒猫微服 (LazyCat Cloud)](https://lazycat.cloud)** 的原生支持：
+> - 📦 **内置 LPK v2 应用规范**：开箱即用的 `package.yml`、`lzc-manifest.yml` 与 `lzc-build.yml` 配置；
+> - ⚡️ **轻量自包含打包**：单包仅约 300KB，容器内轻量 Node 环境极速运行，无需在微服设备端联网拉取外部镜像；
+> - 🔒 **自动化 TLS 与长连接隧道**：通过 `public_path: - /` 放行客户端原生加密流量，自动继承懒猫泛域名证书与 WebSocket 升级支持；
+> - 🚀 **一键部署到私有硬件**：支持使用 `lzc-cli` 直接打包并安装到自己的懒猫微服设备。
+
 **[Alma](https://alma.now) 远程访问**的自托管中继：在任何地方用手机上的 Alma
 控制电脑上的 Alma。不用端口转发，不用 VPN，中间也没有第三方。
 
