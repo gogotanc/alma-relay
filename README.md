@@ -96,6 +96,20 @@ relay.example.com {
 
 Check it with `curl https://relay.example.com/healthz`.
 
+### Option D: LazyCat Cloud (懒猫微服)
+
+Built-in support for LazyCat Cloud (LPK v2 packaging format):
+
+```bash
+# 1. Build .lpk package
+lzc-cli project release -o alma-relay.lpk
+
+# 2. Install to your LazyCat device
+lzc-cli lpk install alma-relay.lpk --apk n
+```
+
+Once installed, your relay will be available at `https://alma-relay.<your-box-domain>` with automatic TLS and WebSocket upgrade support.
+
 ## Connect Alma
 
 1. On the desktop, open **Settings → Remote Access**.

@@ -74,7 +74,7 @@ lzc-cli project release -o alma-relay.lpk
 lzc-cli lpk install alma-relay.lpk --apk n
 ```
 
-部署完成后，中继公网地址为 `https://alma-relay.<你的盒子名>.heiyu.space`，自带泛域名 HTTPS 与 WebSocket 协议升级支持。
+部署完成后，中继公网地址为 `https://alma-relay.<你的微服域名>`（微服会自动分配对应的二级子域名或绑定域名），自带泛域名 HTTPS 证书与 WebSocket 协议升级支持。
 
 ## 在 Alma 里使用
 
